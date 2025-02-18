@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOLLYWOOD - Artist</title>
+    <style>
+        /* Full-screen background video */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Make the video cover the screen */
+            z-index: -1; /* Make sure the video stays behind other content */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #dcdcdc; /* Light grey text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(48, 26, 107, 0.8); /* Transparent background to show video behind */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 60px;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-image: linear-gradient(90deg, #9b59b6, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .socials {
+            margin-top: 30px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            color: #dcdcdc;
+            margin: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .socials a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .socials a:hover img {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        /* Levitation Effect on Hover */
+        .container:hover {
+            transform: translateY(-10px); /* Moves the box up slightly */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Increased shadow for levitation effect */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 45px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .socials a {
+                font-size: 18px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-background" autoplay muted loop>
+        <source src="mollywood.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>MOLLYWOOD</h1>
+        <h3>Welcome MOLLYWOOD.</h3>
+        
+        <div class="socials">
+            <h2>FOLLOW THE SMUNCER:</h2>
+            <a href="https://soundcloud.com/6mollywood/tracks" target="_blank">
+                <img src="https://www.svgrepo.com/show/303135/soundcloud-logo.svg" alt="SoundCloud">
+            </a>
+            <a href="https://open.spotify.com/artist/4JUoajUgI0mmICMBpV6iEP" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
+            </a>
+            <a href="https://www.youtube.com/@6mollywood/videos" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/6mollywood/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for enhancing interactivity
+        document.querySelector('.container').addEventListener('mouseover', function() {
+            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
+        });
+
+        document.querySelector('.container').addEventListener('mouseout', function() {
+            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.4)';
+        });
+    </script>
+</body>
+</html>
